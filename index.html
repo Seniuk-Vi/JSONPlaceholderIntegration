@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post app</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+
+<button id="getPosts">Get Posts</button>
+
+<form id="getPost">
+    <h2>Get Post</h2>
+    <input type="number" id="getID" placeholder="Post ID" required>
+    <button type="submit">Get Post</button>
+</form>
+
+<form id="createPostForm">
+    <h2>Create Post</h2>
+    <input type="number" id="createUserID" placeholder="User ID">
+    <input type="text" id="createTitle" placeholder="Title">
+    <input type="text" id="createBody" placeholder="Body">
+    <button type="submit">Create Post</button>
+</form>
+
+<form id="updatePostForm">
+    <h2>Update Post</h2>
+    <input type="number" id="updateID" placeholder="Post ID" required>
+    <input type="number" id="updateUserID" placeholder="User ID">
+    <input type="text" id="updateTitle" placeholder="Title">
+    <input type="text" id="updateBody" placeholder="Body">
+    <button type="submit">Update Post</button>
+</form>
+
+<form id="patchPostForm">
+    <h2>Patch Post</h2>
+    <input type="number" id="patchID" placeholder="Post ID" required>
+    <input type="number" id="patchUserID" placeholder="User ID">
+    <input type="text" id="patchTitle" placeholder="Title">
+    <input type="text" id="patchBody" placeholder="Body">
+    <button type="submit">Patch Post</button>
+</form>
+
+<form id="deletePostForm">
+    <h2>Delete Post</h2>
+    <input type="number" id="deleteID" placeholder="Post ID" required>
+    <button type="submit">Delete Post</button>
+</form>
+
+<div id="posts"></div>
+</body>
+</html>
