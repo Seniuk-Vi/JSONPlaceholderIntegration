@@ -7,7 +7,7 @@ export class Post {
     }
 }
 
-export class PostRequest {
+export class CreateRequest {
     constructor(userId, title, body) {
         this.userId = userId;
         this.title = title;

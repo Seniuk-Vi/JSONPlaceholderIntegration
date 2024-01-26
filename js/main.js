@@ -1,5 +1,5 @@
 import {JsonPlaceholderAPI} from './service/JsonPlaceholderAPI.js';
-import {PatchRequest, PostRequest, PutRequest} from './model/postModels.js';
+import {PatchRequest, CreateRequest, PutRequest} from './model/postModels.js';
 
 const apiService = new JsonPlaceholderAPI('https://jsonplaceholder.typicode.com');
 
@@ -36,7 +36,7 @@ async function getPosts() {
  */
 async function createPost(userId, title, body) {
     try {
-        const postRequest = new PostRequest(userId, title, body);
+        const postRequest = new CreateRequest(userId, title, body);
         const post = await apiService.createPost(postRequest);
         console.log(post);
         alert('Post created successfully.');
@@ -55,7 +55,6 @@ async function createPost(userId, title, body) {
  */
 async function updatePost(id, userId, title, body) {
     try {
-        const userId = 1; // Replace with actual user ID
         const putRequest = new PutRequest(id, userId, title, body);
         const post = await apiService.updatePost(putRequest);
         console.log(post);
@@ -106,9 +105,10 @@ document.getElementById('getPost').addEventListener('submit', event => {
 document.getElementById('getPosts').addEventListener('click', getPosts);
 document.getElementById('createPostForm').addEventListener('submit', event => {
     event.preventDefault();
+    const userId = Number(document.getElementById('createUserID').value);
     const title = document.getElementById('createTitle').value;
     const body = document.getElementById('createBody').value;
-    createPost(title, body);
+    createPost(userId, title, body);
 });
 
 document.getElementById('updatePostForm').addEventListener('submit', event => {
@@ -125,7 +125,7 @@ document.getElementById('patchPostForm').addEventListener('submit', event => {
     const id = Number(document.getElementById('patchID').value);
     const fieldsToUpdate = {
         title: document.getElementById('patchTitle').value,
-        userId: document.getElementById('patchUserID').value,
+        userId: Number(document.getElementById('patchUserID').value),
         body: document.getElementById('patchBody').value
     };
     patchPost(id, fieldsToUpdate);
