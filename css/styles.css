@@ -1,0 +1,64 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.post-app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.post-functions-main {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+form * {
+    margin: 5px 0;
+}
+
+.post-list-aside {
+    flex: 3;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.post {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0
+}
+.post button {
+    margin: 0 5px;
+    background-color: transparent;
+    border: 0;
+}
+.post button:hover {
+    cursor: pointer;
+    color: yellow;
+}
+.post:nth-child(odd) {
+    background-color: darkgray;
+}
+
+.post:nth-child(even) {
+    background-color: gray;
+}

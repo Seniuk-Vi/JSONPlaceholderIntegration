@@ -4,7 +4,7 @@ export class JsonPlaceholderAPI {
     }
     /**
      * Fetches all posts from the JSONPlaceholder API.
-     * @returns {Promise<Object[]>} A promise that resolves to an array of posts.
+     * @returns {Promise<Post[]>} A promise that resolves to an array of posts.
      * @throws {Error} If the fetch operation fails.
      */
     async getPosts() {
@@ -30,7 +30,7 @@ export class JsonPlaceholderAPI {
     }
     /**
      * Creates a new post on the JSONPlaceholder API.
-     * @param {PostRequest} postRequest - The post request object containing the details of the post to create.
+     * @param {CreateRequest} postRequest - The post request object containing the details of the post to create.
      * @returns {Promise<Post>} A promise that resolves to the created post.
      * @throws {Error} If the fetch operation fails.
      */

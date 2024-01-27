@@ -7,47 +7,45 @@
     <script type="module" src="./js/main.js"></script>
 </head>
 <body>
+<div class="post-app-container">
+    <main class="post-functions-main">
+        <button id="getPosts">Get Posts</button>
 
-<button id="getPosts">Get Posts</button>
+        <form id="getPost">
+            <h2>Get Post</h2>
+            <input type="number" id="getID" placeholder="Post ID" required min="1">
+            <button type="submit">Get Post</button>
+        </form>
 
-<form id="getPost">
-    <h2>Get Post</h2>
-    <input type="number" id="getID" placeholder="Post ID" required>
-    <button type="submit">Get Post</button>
-</form>
+        <form id="createPostForm">
+            <h2>Create Post</h2>
+            <input type="number" id="createUserID" placeholder="User ID" min="1">
+            <input type="text" id="createTitle" placeholder="Title">
+            <input type="text" id="createBody" placeholder="Body">
+            <button type="submit">Create Post</button>
+        </form>
 
-<form id="createPostForm">
-    <h2>Create Post</h2>
-    <input type="number" id="createUserID" placeholder="User ID">
-    <input type="text" id="createTitle" placeholder="Title">
-    <input type="text" id="createBody" placeholder="Body">
-    <button type="submit">Create Post</button>
-</form>
+        <form id="updatePostForm">
+            <h2>Update Post</h2>
+            <input type="number" id="updateID" placeholder="Post ID" required min="1">
+            <input type="number" id="updateUserID" placeholder="User ID" min="1">
+            <input type="text" id="updateTitle" placeholder="Title">
+            <input type="text" id="updateBody" placeholder="Body">
+            <button type="submit">Update Post</button>
+        </form>
 
-<form id="updatePostForm">
-    <h2>Update Post</h2>
-    <input type="number" id="updateID" placeholder="Post ID" required>
-    <input type="number" id="updateUserID" placeholder="User ID">
-    <input type="text" id="updateTitle" placeholder="Title">
-    <input type="text" id="updateBody" placeholder="Body">
-    <button type="submit">Update Post</button>
-</form>
-
-<form id="patchPostForm">
-    <h2>Patch Post</h2>
-    <input type="number" id="patchID" placeholder="Post ID" required>
-    <input type="number" id="patchUserID" placeholder="User ID">
-    <input type="text" id="patchTitle" placeholder="Title">
-    <input type="text" id="patchBody" placeholder="Body">
-    <button type="submit">Patch Post</button>
-</form>
-
-<form id="deletePostForm">
-    <h2>Delete Post</h2>
-    <input type="number" id="deleteID" placeholder="Post ID" required>
-    <button type="submit">Delete Post</button>
-</form>
-
-<div id="posts"></div>
+        <form id="patchPostForm">
+            <h2>Patch Post</h2>
+            <input type="number" id="patchID" placeholder="Post ID" required min="1">
+            <input type="number" id="patchUserID" placeholder="User ID" min="1">
+            <input type="text" id="patchTitle" placeholder="Title">
+            <input type="text" id="patchBody" placeholder="Body">
+            <button type="submit">Patch Post</button>
+        </form>
+    </main>
+    <aside class="post-list-aside">
+        <div class="post-list" id="posts"></div>
+    </aside>
+</div>
 </body>
 </html>
